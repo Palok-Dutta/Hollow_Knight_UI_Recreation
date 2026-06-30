@@ -63,13 +63,20 @@ public class MainMenuController : MonoBehaviour
             case  UIType.Options:
                 m_Panels[2].gameObject.SetActive(true);
                 break;
+            case  UIType.Achievements:
+                m_Panels[3].gameObject.SetActive(true);
+                break;
+            case  UIType.Quit:
+                m_Panels[4].gameObject.SetActive(true);
+                break;
         }
     }
 
     private void HideAll()
     {
-        m_Panels[0].gameObject.SetActive(false);
-        m_Panels[1].gameObject.SetActive(false);
-        m_Panels[2].gameObject.SetActive(false);
+        foreach (var panel in m_Panels)
+        {
+            panel.gameObject.SetActive(false);
+        }
     }
 }

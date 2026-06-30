@@ -10,6 +10,8 @@ public enum UIType
     MainMenu,
     GameStart,
     Options,
+    Achievements,
+    Quit,
 }
 
 public class PanelUI : MonoBehaviour
