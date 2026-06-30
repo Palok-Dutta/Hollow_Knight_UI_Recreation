@@ -6,6 +6,7 @@ using UnityEngine;
 public class MainMenuController : MonoBehaviour
 {
     [SerializeField] private List<AudioSource> m_HoverAudioSouces;
+    [SerializeField] private AudioSource m_ClickAudio;
     public static MainMenuController Instance;
     [SerializeField] private PanelUI[] m_Panels;
     private void Awake()
@@ -70,6 +71,11 @@ public class MainMenuController : MonoBehaviour
                 m_Panels[4].gameObject.SetActive(true);
                 break;
         }
+    }
+
+    public void PlayClickSound()
+    {
+        m_ClickAudio.Play();
     }
 
     private void HideAll()
